@@ -5,10 +5,11 @@ import styles from "./ourcodde.module.scss";
 import decorate from "../assets/img/beanslogos.svg";
 import girlImg from "../assets/img/girl.jpg";
 import Search from "../components/Search/Search";
+import Filter from "../components/Filter/Filter";
 
 function Ourcoffe() {
   return (
-    <motion.div className="" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}>
+    <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}>
       <div className={styles.imgbg}>
         <Menu />
         <h2 className={styles.title}>Our Coffee</h2>
@@ -24,7 +25,10 @@ function Ourcoffe() {
           </p>
         </div>
       </div>
-      <Search />
+      <div className={styles.filterblock}>
+        <Search />
+        <Filter />
+      </div>
     </motion.div>
   );
 }

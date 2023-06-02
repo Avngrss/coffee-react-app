@@ -3,8 +3,8 @@ import styles from "./search.module.scss";
 
 function Search() {
   return (
-    <div>
-      <p>Lookiing for</p>
+    <div className={styles.search}>
+      <span>Lookiing for</span>
       <input type="text" placeholder="start typing here..." />
     </div>
   );
