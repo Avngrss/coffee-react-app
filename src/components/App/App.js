@@ -1,11 +1,11 @@
-import "./App.scss";
-import Main from "../Main/Main";
+import AnimateRoute from "../AnimateRoute/AnimateRoute";
 import Footer from "../Footer/Footer";
+import "./App.scss";
 
 function App() {
   return (
     <div className="container">
-      <Main />
+      <AnimateRoute />
       <Footer />
     </div>
   );

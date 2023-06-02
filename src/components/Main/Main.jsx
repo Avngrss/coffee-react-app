@@ -1,4 +1,6 @@
 import React from "react";
+import { motion } from "framer-motion";
+
 import styles from "./main.module.scss";
 
 import Menu from "../Menu/Menu";
@@ -15,7 +17,7 @@ const mainCard = [
 
 function Main() {
   return (
-    <div>
+    <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}>
       <div className={styles.main}>
         <Menu />
         <h1 className={styles.title}>Everything You Love About Coffee</h1>
@@ -44,7 +46,7 @@ function Main() {
           ))}
         </div>
       </section>
-    </div>
+    </motion.div>
   );
 }
 
