@@ -1,13 +1,30 @@
 import React from "react";
 import { motion } from "framer-motion";
-import Menu from "../components/Menu/Menu";
+
 import styles from "./ourcodde.module.scss";
-import decorate from "../assets/img/beanslogos.svg";
-import girlImg from "../assets/img/girl.jpg";
+import Menu from "../components/Menu/Menu";
 import Search from "../components/Search/Search";
 import Filter from "../components/Filter/Filter";
+import CoffeeCard from "../components/CoffeeCard/CoffeeCard";
+
+import decorate from "../assets/img/beanslogos.svg";
+import girlImg from "../assets/img/girl.jpg";
+
+const coffee = [
+  { img: "/img/coffee1.png", title: "AROMISTICO Coffee 1 kg", country: "Brazil", price: "8.99$" },
+  { img: "/img/coffee2.png", title: "Uniflex Coffee 1 kg", country: "Kenya", price: "12$" },
+  { img: "/img/coffee3.png", title: "Drip Coffee 1 kg", country: "Columbia", price: "6.99$" },
+  { img: "/img/coffee4.jpg", title: "Aromika Coffee 1 kg", country: "Brazil", price: "9.99$" },
+  { img: "/img/coffee5.jpg", title: "Josse Coffee 1 kg", country: "Columbia", price: "17$" },
+  { img: "/img/coffee6.webp", title: "Deep Coffee 1 kg", country: "Kenya", price: "6.94$" },
+];
 
 function Ourcoffe() {
+  const [searchValue, setSearchValue] = React.useState("");
+
+  const onChangeSearchValue = (e) => {
+    setSearchValue(e.target.value);
+  };
   return (
     <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}>
       <div className={styles.imgbg}>
@@ -26,8 +43,15 @@ function Ourcoffe() {
         </div>
       </div>
       <div className={styles.filterblock}>
-        <Search />
+        <Search onChangeSearchValue={onChangeSearchValue} searchValue={searchValue} />
         <Filter />
+      </div>
+      <div className={styles.coffeeContent}>
+        {coffee
+          .filter((coffee) => coffee.title.toLowerCase().includes(searchValue.toLowerCase()))
+          .map((item) => (
+            <CoffeeCard img={item.img} title={item.title} country={item.country} price={item.price} />
+          ))}
       </div>
     </motion.div>
   );

@@ -1,11 +1,11 @@
 import React from "react";
 import styles from "./search.module.scss";
 
-function Search() {
+function Search({ onChangeSearchValue, searchValue }) {
   return (
     <div className={styles.search}>
-      <span>Lookiing for</span>
-      <input type="text" placeholder="start typing here..." />
+      <span>{searchValue ? `search by request: "${searchValue}"` : "Lookiing for"}</span>
+      <input type="text" placeholder="start typing here..." onChange={onChangeSearchValue} />
     </div>
   );
 }
