@@ -1,7 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 
-import styles from "./ourcodde.module.scss";
+import styles from "./ourcoffe.module.scss";
 import Menu from "../components/Menu/Menu";
 import Search from "../components/Search/Search";
 import Filter from "../components/Filter/Filter";

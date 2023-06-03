@@ -1,5 +1,7 @@
 .imgbg {
   background-image: url(../assets/img/coffebg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
   padding-bottom: 60px;
 }
 .title {
@@ -43,7 +45,7 @@
   gap: 80px;
 }
 .coffeeContent {
-  margin-top: 39px;
+  margin-top: 40px;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
