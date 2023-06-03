@@ -1,7 +1,12 @@
 import React from "react";
+import Coffeeheader from "../components/Coffeeheader/Coffeeheader";
 
 function AboutCoffee() {
-  return <div>AboutCoffee</div>;
+  return (
+    <div>
+      <Coffeeheader />
+    </div>
+  );
 }
 
 export default AboutCoffee;

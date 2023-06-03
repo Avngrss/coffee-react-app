@@ -1,10 +1,17 @@
 import React from "react";
 import styles from "./filterbtn.module.scss";
 
-function FilterBtn({ title }) {
+function FilterBtn({ title, filterCoffee }) {
   return (
     <>
-      <button className={styles.filterbtn}>{title}</button>
+      <button
+        className={styles.filterbtn}
+        onClick={() => {
+          filterCoffee(title);
+        }}
+      >
+        {title}
+      </button>
     </>
   );
 }

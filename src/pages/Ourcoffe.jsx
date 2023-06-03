@@ -1,11 +1,11 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { motion } from "framer-motion";
 
 import styles from "./ourcoffe.module.scss";
-import Menu from "../components/Menu/Menu";
 import Search from "../components/Search/Search";
 import Filter from "../components/Filter/Filter";
 import CoffeeCard from "../components/CoffeeCard/CoffeeCard";
+import Coffeeheader from "../components/Coffeeheader/Coffeeheader";
 
 import decorate from "../assets/img/beanslogos.svg";
 import girlImg from "../assets/img/girl.jpg";
@@ -22,16 +22,25 @@ const coffee = [
 
 function Ourcoffe() {
   const [searchValue, setSearchValue] = React.useState("");
+  const [data, setData] = React.useState([]);
+  const [filterItems, setFilterItems] = React.useState([]);
+
+  useEffect(() => {
+    setData(coffee);
+    setFilterItems([...new Set(coffee.map((item) => item.country))]);
+  }, []);
+
+  const filterCoffee = (itemData) => {
+    const filterData = coffee.filter((item) => item.country === itemData);
+    setData(filterData);
+  };
 
   const onChangeSearchValue = (e) => {
     setSearchValue(e.target.value);
   };
   return (
     <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}>
-      <div className={styles.imgbg}>
-        <Menu />
-        <h2 className={styles.title}>Our Coffee</h2>
-      </div>
+      <Coffeeheader />
       <div className={styles.infoBlock}>
         <img src={girlImg} alt="girlImg" />
         <div className={styles.leftblock}>
@@ -45,11 +54,11 @@ function Ourcoffe() {
       </div>
       <div className={styles.filterblock}>
         <Search onChangeSearchValue={onChangeSearchValue} searchValue={searchValue} />
-        <Filter />
+        <Filter filterCoffee={filterCoffee} filterItems={filterItems} />
       </div>
       <Link to="/aboutcoffee">
         <div className={styles.coffeeContent}>
-          {coffee
+          {data
             .filter((coffee) => coffee.title.toLowerCase().includes(searchValue.toLowerCase()))
             .map((item, i) => (
               <CoffeeCard key={i} img={item.img} title={item.title} country={item.country} price={item.price} />
