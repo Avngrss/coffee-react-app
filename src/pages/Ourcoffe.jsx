@@ -9,6 +9,7 @@ import CoffeeCard from "../components/CoffeeCard/CoffeeCard";
 
 import decorate from "../assets/img/beanslogos.svg";
 import girlImg from "../assets/img/girl.jpg";
+import { Link } from "react-router-dom";
 
 const coffee = [
   { img: "/img/coffee1.png", title: "AROMISTICO Coffee 1 kg", country: "Brazil", price: "8.99$" },
@@ -46,13 +47,15 @@ function Ourcoffe() {
         <Search onChangeSearchValue={onChangeSearchValue} searchValue={searchValue} />
         <Filter />
       </div>
-      <div className={styles.coffeeContent}>
-        {coffee
-          .filter((coffee) => coffee.title.toLowerCase().includes(searchValue.toLowerCase()))
-          .map((item) => (
-            <CoffeeCard img={item.img} title={item.title} country={item.country} price={item.price} />
-          ))}
-      </div>
+      <Link to="/aboutcoffee">
+        <div className={styles.coffeeContent}>
+          {coffee
+            .filter((coffee) => coffee.title.toLowerCase().includes(searchValue.toLowerCase()))
+            .map((item, i) => (
+              <CoffeeCard key={i} img={item.img} title={item.title} country={item.country} price={item.price} />
+            ))}
+        </div>
+      </Link>
     </motion.div>
   );
 }

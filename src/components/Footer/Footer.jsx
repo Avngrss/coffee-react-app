@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import styles from "./footer.module.scss";
 
 import footerLogo from "../../assets/img/Logofooter.svg";
@@ -8,14 +9,16 @@ function Footer() {
   return (
     <div>
       <div className={styles.footer}>
-        <img src={footerLogo} alt="footerLogo" />
+        <Link to="/">
+          <img src={footerLogo} alt="logo" />
+        </Link>
         <ul className={styles.menu}>
-          <li>
-            <a href="#">Our coffee</a>
-          </li>
-          <li>
-            <a href="#">For your pleasure</a>
-          </li>
+          <Link to="/ourcoffe">
+            <li>Our coffee</li>
+          </Link>
+          <Link to="/pleasure">
+            <li>For your pleasure</li>
+          </Link>
         </ul>
       </div>
       <img src={decorateTwo} alt="decorate" className={styles.decorate} />
