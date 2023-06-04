@@ -1,0 +1,43 @@
+.coffeeflex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.left {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.title {
+  text-align: center;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 35px;
+  color: #000000;
+}
+.boldSpan {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 20px;
+  color: #000000;
+}
+.text {
+  width: 418px;
+  height: 102px;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 20px;
+  color: #363636;
+  span {
+    display: inline;
+  }
+}
+.price {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 20px;
+  color: #000000;
+  span {
+    display: inline;
+  }
+}
