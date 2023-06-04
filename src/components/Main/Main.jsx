@@ -9,11 +9,14 @@ import MainCard from "../MainCard/MainCard";
 
 import decorate from "../../assets/img/beanslogo.svg";
 import decorateTwo from "../../assets/img/beanslogos.svg";
+import SolimoCoffeeBeans from "../../assets/img/SolimoCoffeeBeans.png";
+import PrestoCoffeeBeans from "../../assets/img/PrestoCoffeeBeans.png";
+import AROMISTICOCoffee from "../../assets/img/AROMISTICOCoffee.png";
 
 const mainCard = [
-  { img: "img/SolimoCoffeeBeans.png", title: "Solimo Coffee Beans 2 kg", price: "10.73$" },
-  { img: "img/PrestoCoffeeBeans.png", title: "Presto Coffee Beans 1 kg", price: "15.99$" },
-  { img: "img/AROMISTICOCoffee.png", title: "AROMISTICO Coffee 1 kg", price: "6.99$" },
+  { img: SolimoCoffeeBeans, title: "Solimo Coffee Beans 2 kg", price: "10.73$" },
+  { img: PrestoCoffeeBeans, title: "Presto Coffee Beans 1 kg", price: "15.99$" },
+  { img: AROMISTICOCoffee, title: "AROMISTICO Coffee 1 kg", price: "6.99$" },
 ];
 
 function Main() {
