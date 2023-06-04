@@ -25,7 +25,7 @@ function Pleasure() {
     <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}>
       <Coffeeheader text={"For your pleasure"} img={pleasurebg} />
       <Info title={title} text={text} img={hotcoffee} />
-      <Link to="/aboutcoffee">
+      <Link to="aboutcoffee">
         <div className={styles.coffeeContent}>
           {coffee.map((item, i) => (
             <CoffeeCard key={i} img={item.img} title={item.title} country={item.country} price={item.price} />

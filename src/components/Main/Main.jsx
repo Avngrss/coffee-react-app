@@ -26,7 +26,7 @@ function Main() {
         <p className={styles.subtitle}>
           We makes every day full of energy and taste <br /> Want to try our beans?
         </p>
-        <Link to="/ourcoffe">
+        <Link to="ourcoffe">
           <button className={styles.mainbtn}>More</button>
         </Link>
       </div>
