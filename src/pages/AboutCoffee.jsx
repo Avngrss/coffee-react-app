@@ -5,11 +5,12 @@ import styles from "./aboutcoffee.module.scss";
 import Coffeeheader from "../components/Coffeeheader/Coffeeheader";
 import coffeePage from "../assets/img/coffeepage.jpg";
 import decorate from "../assets/img/beanslogos.svg";
+import coffeebg from "../assets/img/coffebg.jpg";
 
 function AboutCoffee() {
   return (
     <div>
-      <Coffeeheader />
+      <Coffeeheader text={"Our Coffee"} img={coffeebg} />
       <div className={styles.coffeeflex}>
         <img src={coffeePage} alt="coffeePage" />
         <div className={styles.left}>

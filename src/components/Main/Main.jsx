@@ -1,5 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 
 import styles from "./main.module.scss";
 
@@ -25,7 +26,9 @@ function Main() {
         <p className={styles.subtitle}>
           We makes every day full of energy and taste <br /> Want to try our beans?
         </p>
-        <button className={styles.mainbtn}>More</button>
+        <Link to="/ourcoffe">
+          <button className={styles.mainbtn}>More</button>
+        </Link>
       </div>
       <section className={styles.infosection}>
         <h2 className={styles.minititle}>About Us</h2>

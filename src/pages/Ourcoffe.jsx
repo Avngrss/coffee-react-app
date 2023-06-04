@@ -6,10 +6,11 @@ import Search from "../components/Search/Search";
 import Filter from "../components/Filter/Filter";
 import CoffeeCard from "../components/CoffeeCard/CoffeeCard";
 import Coffeeheader from "../components/Coffeeheader/Coffeeheader";
+import Info from "../components/Info/Info";
 
-import decorate from "../assets/img/beanslogos.svg";
-import girlImg from "../assets/img/girl.jpg";
 import { Link } from "react-router-dom";
+import coffeebg from "../assets/img/coffebg.jpg";
+import girlImg from "../assets/img/girl.jpg";
 
 const coffee = [
   { img: "/img/coffee1.png", title: "AROMISTICO Coffee 1 kg", country: "Brazil", price: "8.99$" },
@@ -20,6 +21,10 @@ const coffee = [
   { img: "/img/coffee6.webp", title: "Deep Coffee 1 kg", country: "Kenya", price: "6.94$" },
 ];
 
+const title = "About our beans";
+
+const text =
+  "Extremity sweetness difficult behaviour he of. On disposal of as landlord horrible. Afraid at highly months do things on at. Situation recommend objection do intention so questions. As greatly removed calling pleased improve an. Last ask him cold feel met spot shy want. Children me laughing we prospect answered followed. At it went issong that held help face.";
 function Ourcoffe() {
   const [searchValue, setSearchValue] = React.useState("");
   const [data, setData] = React.useState([]);
@@ -40,18 +45,8 @@ function Ourcoffe() {
   };
   return (
     <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}>
-      <Coffeeheader />
-      <div className={styles.infoBlock}>
-        <img src={girlImg} alt="girlImg" />
-        <div className={styles.leftblock}>
-          <h3 className={styles.smalltitle}>About our beans</h3>
-          <img src={decorate} alt="decorate" />
-          <p>
-            Extremity sweetness difficult behaviour he of. On disposal of as landlord horrible. Afraid at highly months do things on at. Situation recommend objection do intention so questions. As greatly removed calling pleased improve an. Last ask him cold feel met spot shy want. Children me laughing we prospect answered followed. At it went is
-            song that held help face.
-          </p>
-        </div>
-      </div>
+      <Coffeeheader text={"Our Coffee"} img={coffeebg} />
+      <Info img={girlImg} title={title} text={text} />
       <div className={styles.filterblock}>
         <Search onChangeSearchValue={onChangeSearchValue} searchValue={searchValue} />
         <Filter filterCoffee={filterCoffee} filterItems={filterItems} />
