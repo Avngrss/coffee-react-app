@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/coffee-react-app/static/css/main.eb9b1c43.css",
-    "main.js": "/coffee-react-app/static/js/main.2cbc8634.js",
+    "main.js": "/coffee-react-app/static/js/main.52a40dde.js",
     "static/media/cardbg.jpg": "/coffee-react-app/static/media/cardbg.e3f5093ea8367ad771ef.jpg",
     "static/media/pleasurebg.png": "/coffee-react-app/static/media/pleasurebg.ebb414eb116c561181ad.png",
     "static/media/mainbg.jpg": "/coffee-react-app/static/media/mainbg.ad9c54d6db833396a159.jpg",
@@ -9,16 +9,19 @@
     "static/media/coffeepage.jpg": "/coffee-react-app/static/media/coffeepage.ca37a7e1a91fa817a123.jpg",
     "static/media/hotcoffee.png": "/coffee-react-app/static/media/hotcoffee.5e617ab40eb6bbdd3954.png",
     "static/media/girl.jpg": "/coffee-react-app/static/media/girl.7495420333689d066d26.jpg",
+    "static/media/AROMISTICOCoffee.png": "/coffee-react-app/static/media/AROMISTICOCoffee.abb45c1ba257a5364ef1.png",
+    "static/media/SolimoCoffeeBeans.png": "/coffee-react-app/static/media/SolimoCoffeeBeans.25d5ad4a54bdd9afbde4.png",
+    "static/media/PrestoCoffeeBeans.png": "/coffee-react-app/static/media/PrestoCoffeeBeans.7d9f028b14b6f1708735.png",
     "static/media/Logo.svg": "/coffee-react-app/static/media/Logo.3966671a43120fd70723983c193c47f9.svg",
     "static/media/Logofooter.svg": "/coffee-react-app/static/media/Logofooter.39d16553118e67db52e93d822782c391.svg",
     "static/media/beanslogo.svg": "/coffee-react-app/static/media/beanslogo.f8bb24df6c5a64be2274dbf3e32dbd97.svg",
     "static/media/beanslogos.svg": "/coffee-react-app/static/media/beanslogos.17c3d4b2f93e775f3a4880f7bdbdedfe.svg",
     "index.html": "/coffee-react-app/index.html",
     "main.eb9b1c43.css.map": "/coffee-react-app/static/css/main.eb9b1c43.css.map",
-    "main.2cbc8634.js.map": "/coffee-react-app/static/js/main.2cbc8634.js.map"
+    "main.52a40dde.js.map": "/coffee-react-app/static/js/main.52a40dde.js.map"
   },
   "entrypoints": [
     "static/css/main.eb9b1c43.css",
-    "static/js/main.2cbc8634.js"
+    "static/js/main.52a40dde.js"
   ]
 }
