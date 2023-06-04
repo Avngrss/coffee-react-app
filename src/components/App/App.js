@@ -1,6 +1,6 @@
 import AnimateRoute from "../AnimateRoute/AnimateRoute";
 import Footer from "../Footer/Footer";
-import Main from "../Main/Main";
+
 import "./App.scss";
 
 function App() {
