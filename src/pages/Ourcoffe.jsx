@@ -51,7 +51,7 @@ function Ourcoffe() {
         <Search onChangeSearchValue={onChangeSearchValue} searchValue={searchValue} />
         <Filter filterCoffee={filterCoffee} filterItems={filterItems} />
       </div>
-      <Link to="aboutcoffee">
+      <Link to="/aboutcoffee">
         <div className={styles.coffeeContent}>
           {data
             .filter((coffee) => coffee.title.toLowerCase().includes(searchValue.toLowerCase()))
